@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        }
+
+        #message-container {
+        width: 80%;
+        max-width: 1200px;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+        padding-top: 45px;
+        margin-top: 45px;
+        }
+
+        /*#message-container div {
+        background-color: #CCC;
+        padding: 5px;
+        }
+
+        #message-container div:nth-child(2n) {
+        background-color: #FFF;
+        }*/
+
+        #send-container {
+        position: fixed;
+        height: 50px;
+        padding-bottom: 50px;
+        bottom: 0;
+        background-color: white;
+        max-width: 1200px;
+        width: 80%;
+        display: flex;
+        }
+
+        #send-button{
+            width:20%;
+        }
+
+        #message-input {
+        flex-grow: 1;
+        }
+
+        #header{
+            position: fixed;
+            max-width: 1200px;
+            background-color: black;
+            width:80%;
+            top: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            float: none;
+            
+        }
+
+        .message-they {
+            background-color: rgb(172, 163, 163);
+            padding:10px;
+            border-radius: 10px;
+            width:75%;
+            margin-top: 5px;
+            float:left;
+        }
+
+        .message-me {
+            background-color: rgb(141, 133, 133);
+            padding:10px;
+            border-radius: 10px;
+            width:75%;
+            margin-top: 5px;
+            float: right;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 style="text-align: center; color: #FFF;">X-CHAT</h1>
+    </div>
+    
+    <div id="message-container"></div>
+    <form id="send-container">
+        <input type="text" id="message-input" style="padding-inline-start: 10px;" placeholder="Type your massage here...">
+        <button type="submit" id="send-button" style="background-color: black; color: #FFF;">Send</button>
+    </form>
+</body>
+</html>
